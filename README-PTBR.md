@@ -1,7 +1,6 @@
 # Zamasu UDP
 Zamasu UDP é um pequeno conjunto de classes para o serviço de compartilhamento de Hashes através de Sockets UDP.
 
-
 # Documentation
 You can check all on DOC folder.
 

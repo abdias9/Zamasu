@@ -1,5 +1,6 @@
 # Zamasu UDP
 Ruby Object Oriented Classes to manage shared Hashes with UDP Sockets.
+Other Languages: [PT-BR](https://github.com/abdias9/Zamasu/blob/master/README-PTBR.md)
 
 # Documentation
 You can check all on DOC folder.
