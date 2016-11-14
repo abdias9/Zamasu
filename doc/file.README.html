@@ -60,14 +60,60 @@
       <iframe id="search_frame" src="file_list.html"></iframe>
 
       <div id="content"><div id='filecontents'>
-<h1>Zamasu UDP</h1>
-<p>Zamasu UDP é um pequeno conjunto de classes para o serviço de compartilhamento de Hashes via UDP. Através da classe Zamasu::Server será possível receber e transmitir informações através do protocolo UDP, sincronizando essas informações de maneira leve e ágil, dando acesso remoto e compartilhado a um Hash de informações recebidas pelos Zamasu::Client's.</p>
-<h2>Introdução</h1>
-<p>dd</p>
+<h1 id="label-Zamasu">Zamasu</h1>
+
+<p>Zamasu é um pequeno conjunto de classes para o serviço de compartilhamento
+de Hashes via UDP. Através da classe Zamasu::Server será possível receber e
+transmitir informações através do protocolo UDP, sincronizando essas
+informações de maneira leve e ágil, dando acesso remoto e compartilhado a
+um Hash de informações recebidas pelos clientes.</p>
+
+<h1 id="label-Documenta-C3-A7-C3-A3o">Documentação</h1>
+
+<p>Zamasu é 100% documentada em português. Você pode acessar através do nosso
+<a href="https://zamasu.000webhostapp.com/">Endereço Temporário</a>.</p>
+
+<h1 id="label-Requisitos">Requisitos</h1>
+<ul><li>
+<p>Possuir o <a href="https://www.ruby-lang.org/">Ruby</a> instalado
+(recomendo a versão 2.3).</p>
+</li></ul>
+
+<h1 id="label-Exemplos">Exemplos</h1>
+
+<p>No diretório <a
+href="https://github.com/abdias9/Zamasu/tree/master/Example">Exemplos</a>,
+é possível encontrar exemplos síncronos da utilização do Zamasu, incluindo
+sua aplicação para o desenvolvimento de jogos utilizando a biblioteca <a
+href="https://www.libgosu.org/">libgosu</a>.</p>
+
+<h1 id="label-Servidor">Servidor</h1>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require_relative'>require_relative</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ZamasuServer.rb</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='comment'># Cria uma nova instância do servidor que opera na porta 9009.
+</span><span class='const'>Zamasu</span><span class='op'>::</span><span class='const'>Server</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>9009</span><span class='rparen'>)</span>
+</code></pre>
+
+<h1 id="label-Cliente">Cliente</h1>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require_relative'>require_relative</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ZamasuClient.rb</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='comment'># Realiza uma conexão com o servidor através das informações fornecidas.
+</span><span class='id identifier rubyid_client'>client</span> <span class='op'>=</span> <span class='const'>Zamasu</span><span class='op'>::</span><span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>localhost</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='int'>9009</span><span class='rparen'>)</span>
+<span class='comment'># Inicializa o Hash compartilhado.
+</span><span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_initialize_attributes'>initialize_attributes</span><span class='lparen'>(</span><span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>x</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='int'>1</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>y</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='int'>2</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+<span class='comment'># Seta individualmente um atributo no lado do servidor.
+</span><span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_set_attrib'>set_attrib</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>x</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='int'>8</span><span class='rparen'>)</span>
+<span class='comment'># Aguarda um segundo (tempo mais que necessário) para que já tenha recebido as informações atualizadas do hash remoto.
+</span><span class='id identifier rubyid_sleep'>sleep</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span>
+<span class='comment'># Exibe o valor do atributo &#39;x&#39;. Exatamente a última versão que recebeu do servidor.
+</span><span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_get_attrib'>get_attrib</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>x</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+</code></pre>
 </div></div>
 
       <div id="footer">
-  Generated on Sun Nov 13 17:11:58 2016 by
+  Generated on Mon Nov 14 09:16:10 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.3.1).
 </div>
