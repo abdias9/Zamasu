@@ -28,13 +28,12 @@ module Zamasu
                 message, address = @sock.recvfrom(BUFF)
                 _, port, host, _, = address
                 puts "[RECV] #{message} from #{host}:#{port}"
-                client = ClientInfo.new(host, 9010)
-                append_client(client)
+                append_client(ClientInfo.new(host, 9010))
                 process message
             end
         end
 
-        # Verifica se houve alguma alteração no hash e envia para os clientes. Ela é chamada após o recebimento de uma chamada de mudança de atributo.
+        # Verifica se houve alguma alteração no hash o retorna atualizado para os clientes. Chamada após o recebimento de uma mudança de atributo.
         # @return [void]
         def sync
             if !equal_attributes(@attributes, @last_attributes)
