@@ -2,7 +2,7 @@
 Zamasu UDP é um pequeno conjunto de classes para o serviço de compartilhamento de Hashes via UDP. Através da classe NetworkServer será possível receber e transmitir informações através do protocolo UDP, sincronizando essas informações de maneira leve e ágil, dando acesso remoto e compartilhado a um Hash de informações recebidas pelos NetworkClient's.
 
 # Documentação
-Zamasu UDP é 100% documentada em português. Basta clonar o repositório e verificar o diretório [DOC](https://github.com/abdias9/Zamasu/tree/master/DOC). 
+Zamasu UDP é 100% documentada em português. Você pode acessar através do nosso [Endereço Temporário](https://zamasu.000webhostapp.com/). 
 
 # Requisitos
 * Possuir o [Ruby](https://www.ruby-lang.org/) instalado (recomendo a versão 2.3).
