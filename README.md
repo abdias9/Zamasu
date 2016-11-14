@@ -1,7 +1,7 @@
 # Zamasu UDP
 Ruby Object Oriented Classes to manage shared Hashes with UDP Sockets.
 
-# Website
+# Documentation
 You can check all on DOC folder.
 
 # Setting Up
