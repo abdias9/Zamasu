@@ -1,7 +1,9 @@
 # encoding: utf-8
 
-# Initializes the UDPZamasuClient connection with the server.
-client = UDPZamasuClient.new 'localhost', 9009
+require '../ZamasuClient.rb'
+
+# Initializes the Zamasu::Client connection with the server.
+client = Zamasu::Client.new 'localhost', 9009
 
 # Intialize all attributes of the Hash.
 client.initialize_attributes {

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
-  Class: UDPZamasuClient
+  Class: Zamasu::Client
   
     &mdash; Documentation by YARD 0.9.5
   
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  pathId = "UDPZamasuClient";
+  pathId = "Zamasu::Client";
   relpath = '';
 </script>
 
@@ -39,7 +39,7 @@
     <a href="_index.html">Index (U)</a> &raquo;
     
     
-    <span class="title">UDPZamasuClient</span>
+    <span class="title">Zamasu::Client</span>
   
 </div>
 
@@ -61,7 +61,7 @@
 
       <iframe id="search_frame" src="class_list.html"></iframe>
 
-      <div id="content"><h1>Class: UDPZamasuClient
+      <div id="content"><h1>Class: Zamasu::Client
   
   
   
@@ -76,7 +76,7 @@
         <ul class="fullTree">
           <li>Object</li>
           
-            <li class="next">UDPZamasuClient</li>
+            <li class="next">Zamasu::Client</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
@@ -96,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>UDPZamasuClient.rb</dd>
+    <dd>Zamasu::Client.rb</dd>
   </dl>
   
 </div>
@@ -104,8 +104,8 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     
-<p>UDPZamasuClient é em sua teoria, uma classe remota e sincronizada
-constantemente através de uma conexão com um UDPZamasuServer.</p>
+<p>Zamasu::Client é em sua teoria, uma classe remota e sincronizada
+constantemente através de uma conexão com um Zamasu::Server.</p>
 
 
   </div>
@@ -203,7 +203,7 @@ constantemente através de uma conexão com um UDPZamasuServer.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(host, port)  &#x21d2; UDPZamasuClient </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(host, port)  &#x21d2; Zamasu::Client </a>
     
 
     
@@ -220,7 +220,7 @@ constantemente através de uma conexão com um UDPZamasuServer.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Instancia um novo UDPZamasuClient e se conecta ao UDPZamasuServer.</p>
+<p>Instancia um novo Zamasu::Client e se conecta ao Zamasu::Server.</p>
 </div></span>
   
 </li>
@@ -244,7 +244,7 @@ constantemente através de uma conexão com um UDPZamasuServer.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Inicializa o Hash de atributos enviando para o UDPZamasuServer e setando os
+<p>Inicializa o Hash de atributos enviando para o Zamasu::Server e setando os
 valores padrões na instância local.</p>
 </div></span>
   
@@ -293,7 +293,7 @@ valores padrões na instância local.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Envia todo o hash local de atributos para o UDPZamasuServer.</p>
+<p>Envia todo o hash local de atributos para o Zamasu::Server.</p>
 </div></span>
   
 </li>
@@ -332,7 +332,7 @@ valores padrões na instância local.</p>
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(host, port)  &#x21d2; <tt><span class='object_link'><a href="" title="UDPZamasuClient (class)">UDPZamasuClient</a></span></tt> 
+    #<strong>initialize</strong>(host, port)  &#x21d2; <tt><span class='object_link'><a href="" title="Zamasu::Client (class)">Zamasu::Client</a></span></tt> 
   
 
   
@@ -341,7 +341,7 @@ valores padrões na instância local.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Instancia um novo UDPZamasuClient e se conecta ao UDPZamasuServer</p>
+<p>Instancia um novo Zamasu::Client e se conecta ao Zamasu::Server</p>
 
 
   </div>
@@ -361,7 +361,7 @@ valores padrões na instância local.</p>
       
         &mdash;
         <div class='inline'>
-<p>Endereço do UDPZamasuServer</p>
+<p>Endereço do Zamasu::Server</p>
 </div>
       
     </li>
@@ -377,7 +377,7 @@ valores padrões na instância local.</p>
       
         &mdash;
         <div class='inline'>
-<p>Porta do UDPZamasuServer</p>
+<p>Porta do Zamasu::Server</p>
 </div>
       
     </li>
@@ -402,7 +402,7 @@ valores padrões na instância local.</p>
 22</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'UDPZamasuClient.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'Zamasu::Client.rb', line 14</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_host'>host</span><span class='comma'>,</span> <span class='id identifier rubyid_port'>port</span><span class='rparen'>)</span>
     <span class='ivar'>@attributes</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
@@ -494,7 +494,7 @@ valores padrões na instância local.</p>
 60</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'UDPZamasuClient.rb', line 58</span>
+      <pre class="code"><span class="info file"># File 'Zamasu::Client.rb', line 58</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_attrib'>get_attrib</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='ivar'>@attributes</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
@@ -553,7 +553,7 @@ valores padrões na instância local.</p>
 66</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'UDPZamasuClient.rb', line 64</span>
+      <pre class="code"><span class="info file"># File 'Zamasu::Client.rb', line 64</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_attributes'>get_attributes</span>
     <span class='kw'>return</span> <span class='ivar'>@attributes</span>
@@ -643,7 +643,7 @@ valores padrões na instância local.</p>
 38</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'UDPZamasuClient.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'Zamasu::Client.rb', line 36</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_increment_attrib'>increment_attrib</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
     <span class='ivar'>@sout</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[increment-attrib] </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_value'>value</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='int'>0</span>
@@ -665,7 +665,7 @@ valores padrões na instância local.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Inicializa o Hash de atributos enviando para o UDPZamasuServer e setando os
+<p>Inicializa o Hash de atributos enviando para o Zamasu::Server e setando os
 valores padrões na instância local</p>
 
 
@@ -719,7 +719,7 @@ valores padrões na instância local</p>
 53</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'UDPZamasuClient.rb', line 50</span>
+      <pre class="code"><span class="info file"># File 'Zamasu::Client.rb', line 50</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize_attributes'>initialize_attributes</span><span class='lparen'>(</span><span class='id identifier rubyid_attribs'>attribs</span><span class='rparen'>)</span>
     <span class='ivar'>@attributes</span> <span class='op'>=</span> <span class='id identifier rubyid_attribs'>attribs</span>
@@ -810,7 +810,7 @@ valores padrões na instância local</p>
 30</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'UDPZamasuClient.rb', line 28</span>
+      <pre class="code"><span class="info file"># File 'Zamasu::Client.rb', line 28</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_set_attrib'>set_attrib</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
     <span class='ivar'>@sout</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[set-attrib] </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_value'>value</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='int'>0</span>
@@ -832,7 +832,7 @@ valores padrões na instância local</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Envia todo o hash local de atributos para o UDPZamasuServer</p>
+<p>Envia todo o hash local de atributos para o Zamasu::Server</p>
 
 
   </div>
@@ -884,7 +884,7 @@ valores padrões na instância local</p>
 45</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'UDPZamasuClient.rb', line 43</span>
+      <pre class="code"><span class="info file"># File 'Zamasu::Client.rb', line 43</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_set_attributes'>set_attributes</span><span class='lparen'>(</span><span class='id identifier rubyid_attribs'>attribs</span><span class='rparen'>)</span>
     <span class='ivar'>@sout</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[set-attribs] %</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_attribs'>attribs</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='int'>0</span>
@@ -938,7 +938,7 @@ valores padrões na instância local</p>
 81</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'UDPZamasuClient.rb', line 79</span>
+      <pre class="code"><span class="info file"># File 'Zamasu::Client.rb', line 79</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_start_recv_thread'>start_recv_thread</span>
     <span class='const'>Thread</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='kw'>do</span> <span class='id identifier rubyid_recv'>recv</span> <span class='kw'>end</span>

@@ -1,14 +1,14 @@
 # encoding: utf-8
 
 require 'gosu'
-require_relative '../UDPZamasuClient.rb'
+require_relative '../ZamasuClient.rb'
 
 class GosuClient < Gosu::Window
     SPEED = 2
 
     def initialize
         super 800, 600, false
-        @client = UDPZamasuClient.new 'localhost', 9009
+        @client = Zamasu::Client.new 'localhost', 9009
         @client.initialize_attributes ({
             'x' => 300, 
             'y' => 300

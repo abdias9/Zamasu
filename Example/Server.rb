@@ -1,5 +1,5 @@
 # encoding: utf-8
 
-require_relative '../UDPZamasuServer.rb'
+require_relative '../ZamasuServer.rb'
 
-UDPZamasuServer.new(9009)
+Zamasu::Server.new(9009)
