@@ -6,9 +6,9 @@ require_relative 'ClientInfo.rb'
 # Tamanho máximo do pacote transmitido pela UDPSocket.
 BUFF = 1024
 
-# NetworkServer é o servidor responsável por armazenar um Hash remoto e sincronizar seus valores através dos Clientes.
-class NetworkServer
-    # Instancia um novo NetworkServer e reserva a porta necessária para as operações de entrada. Inicia o loop de recebimento e as devidas operações de saída atavés de UDPSockets
+# UDPZamasuServer é o servidor responsável por armazenar um Hash remoto e sincronizar seus valores através dos Clientes.
+class UDPZamasuServer
+    # Instancia um novo UDPZamasuServer e reserva a porta necessária para as operações de entrada. Inicia o loop de recebimento e as devidas operações de saída atavés de UDPSockets
     # @param [Integer] port Porta a ser usada.
     def initialize(port)
         @clients = Array.new

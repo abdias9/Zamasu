@@ -1,3 +1,3 @@
 ClientInfo.rb 125ff105b54a3fd2eecf2ddc09ba7f7c30e31770
-NetworkClient.rb 1e5f4b7ae10d388de3157439b816a6708cd0802b
-NetworkServer.rb fee3b1a12459c8d91181e8f212b5eec7bc2256a2
+UDPZamasuClient.rb b04886a3727eeb9e93e8cd7d81d5cba71552fae8
+UDPZamasuServer.rb 1e15d1b3651ac83f57a057b3da2fedd27c2f3464

@@ -1,7 +1,7 @@
 # encoding: utf-8
 
-# Initializes the NetworkClient connection with the server.
-client = NetworkClient.new 'localhost', 9009
+# Initializes the UDPZamasuClient connection with the server.
+client = UDPZamasuClient.new 'localhost', 9009
 
 # Intialize all attributes of the Hash.
 client.initialize_attributes {

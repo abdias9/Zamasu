@@ -1,5 +1,5 @@
 # Zamasu UDP
-Zamasu UDP é um pequeno conjunto de classes para o serviço de compartilhamento de Hashes via UDP. Através da classe NetworkServer será possível receber e transmitir informações através do protocolo UDP, sincronizando essas informações de maneira leve e ágil, dando acesso remoto e compartilhado a um Hash de informações recebidas pelos NetworkClient's.
+Zamasu UDP é um pequeno conjunto de classes para o serviço de compartilhamento de Hashes via UDP. Através da classe UDPZamasuServer será possível receber e transmitir informações através do protocolo UDP, sincronizando essas informações de maneira leve e ágil, dando acesso remoto e compartilhado a um Hash de informações recebidas pelos UDPZamasuClient's.
 
 # Documentação
 Zamasu UDP é 100% documentada em português. Você pode acessar através do nosso [Endereço Temporário](https://zamasu.000webhostapp.com/). 

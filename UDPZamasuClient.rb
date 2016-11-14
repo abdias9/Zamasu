@@ -6,11 +6,11 @@ require_relative 'ClientInfo.rb'
 # Tamanho máximo do pacote transmitido pela UDPSocket.
 BUFF = 1024
 
-# NetworkClient é em sua teoria, uma classe remota e sincronizada constantemente através de uma conexão com um NetworkServer.
-class NetworkClient
-    # Instancia um novo NetworkClient e se conecta ao NetworkServer
-    # @param [String] host Endereço do NetworkServer
-    # @param [Integer] port Porta do NetworkServer
+# UDPZamasuClient é em sua teoria, uma classe remota e sincronizada constantemente através de uma conexão com um UDPZamasuServer.
+class UDPZamasuClient
+    # Instancia um novo UDPZamasuClient e se conecta ao UDPZamasuServer
+    # @param [String] host Endereço do UDPZamasuServer
+    # @param [Integer] port Porta do UDPZamasuServer
     def initialize(host, port)
         @attributes = Hash.new
         @sout = UDPSocket.new
@@ -37,14 +37,14 @@ class NetworkClient
         @sout.send "[increment-attrib] #{name}=#{value}", 0
     end
 
-    # Envia todo o hash local de atributos para o NetworkServer
+    # Envia todo o hash local de atributos para o UDPZamasuServer
     # @param [Hash] attribs Hash de atributos
     # @return [nil]
     def set_attributes(attribs)
         @sout.send "[set-attribs] %#{attribs}", 0
     end
 
-    # Inicializa o Hash de atributos enviando para o NetworkServer e setando os valores padrões na instância local
+    # Inicializa o Hash de atributos enviando para o UDPZamasuServer e setando os valores padrões na instância local
     # @param [Hash] attribs Hash de atributos
     # @return [nil]
     def initialize_attributes(attribs)
@@ -90,4 +90,4 @@ class NetworkClient
     private :recv, :process
 end
 
-#NetworkClient.new('localhost', 9009)
+#UDPZamasuClient.new('localhost', 9009)

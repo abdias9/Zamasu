@@ -1,5 +1,5 @@
 # encoding: utf-8
 
-require_relative '../NetworkServer.rb'
+require_relative '../UDPZamasuServer.rb'
 
-NetworkServer.new(9009)
+UDPZamasuServer.new(9009)
