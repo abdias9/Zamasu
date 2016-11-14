@@ -21,7 +21,8 @@ module Zamasu
             recv
         end
 
-
+        # Loop de recebimento. Esse método é chamado ao final do construtor. Você não vai utilizar essa função, a não ser que deseje implementar uma nova.
+        # @return [nil]
         def recv
             loop do 
                 message, address = @sock.recvfrom(BUFF)
@@ -33,6 +34,8 @@ module Zamasu
             end
         end
 
+        # Verifica se houve alguma alteração no hash e envia para os clientes. Ela é chamada após o recebimento de uma chamada de mudança de atributo.
+        # @return [nil]
         def sync
             if !equal_attributes(@attributes, @last_attributes)
                 send("[set-attrib] %#{@attributes}")
@@ -40,6 +43,9 @@ module Zamasu
             end        
         end
 
+        # Envia uma mensagem para todos os clientes.
+        # @param [String] message Mensagem
+        # @return [nil]
         def send(message)
             @clients.each do |client|
                 @out.connect client.host, client.port
@@ -47,6 +53,9 @@ module Zamasu
             end
         end
 
+        # Adiciona um novo cliente na lista de conexões. É chamada automaticamente toda vez que uma nova mensagem chega ao servidor. Verifica se o cliente já possui uma conexão, e se não possui, o adiciona a lista de clientes.
+        # @param [ClientInfo] client Cliente.
+        # @return [nil]
         def append_client(client)
             is = false 
             @clients.each do |c|
@@ -58,6 +67,9 @@ module Zamasu
             puts "[INFO] Cliente adicionado #{client.host}:#{client.port}"
         end
 
+        # Processa uma mensagem recebida. Você pode querer sobrescrevê-la.
+        # @param [String] message Mensagem
+        # @return [nil]
         def process(message)
             cmd = message.split
             case cmd[0]
@@ -93,6 +105,6 @@ module Zamasu
             return false
         end
 
-        private :recv, :sync, :equal_attributes, :process, :send, :append_client
+        private :equal_attributes
     end
 end
