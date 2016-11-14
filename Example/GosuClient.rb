@@ -32,7 +32,7 @@ class GosuClient < Gosu::Window
     end
 
     def draw
-        if @client.get_attributes.size != 0
+        if @client.attributes_loaded?
             @img.draw @client.get_attrib('x'), @client.get_attrib('y'), 0
         end
     end
