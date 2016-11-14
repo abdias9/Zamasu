@@ -1,5 +1,5 @@
 # Zamasu UDP
-A fast RPG Framework for Ruby using libgosu.
+Ruby Object Oriented Classes to manage shared Hashes with UDP Sockets.
 
 # Website
 You can check all the on DOC folder.
