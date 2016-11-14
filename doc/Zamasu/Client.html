@@ -131,6 +131,30 @@ constantemente através de uma conexão com um Zamasu::Server.</p>
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#attributes_loaded%3F-instance_method" title="#attributes_loaded? (instance method)">#<strong>attributes_loaded?</strong>  &#x21d2; true/false </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Checa se já ocorreu o primeiro recebimento de atributos.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#get_attrib-instance_method" title="#get_attrib (instance method)">#<strong>get_attrib</strong>(name)  &#x21d2; Object </a>
     
 
@@ -426,7 +450,61 @@ valores padrões na instância local.</p>
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="get_attrib-instance_method">
+  <h3 class="signature first" id="attributes_loaded?-instance_method">
+  
+    #<strong>attributes_loaded?</strong>  &#x21d2; <tt>true/false</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Checa se já ocorreu o primeiro recebimento de atributos</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>true/false</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+86
+87
+88</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ZamasuClient.rb', line 86</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_attributes_loaded?'>attributes_loaded?</span>
+    <span class='kw'>return</span> <span class='lparen'>(</span><span class='ivar'>@attributes</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>!=</span> <span class='int'>0</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_attrib-instance_method">
   
     #<strong>get_attrib</strong>(name)  &#x21d2; <tt>Object</tt> 
   
@@ -953,7 +1031,7 @@ valores padrões na instância local</p>
 </div>
 
       <div id="footer">
-  Generated on Mon Nov 14 08:38:08 2016 by
+  Generated on Mon Nov 14 08:51:07 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.3.1).
 </div>

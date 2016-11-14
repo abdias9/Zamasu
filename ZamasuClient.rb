@@ -81,6 +81,12 @@ module Zamasu
             Thread.new do recv end
         end
 
+        # Checa se já ocorreu o primeiro recebimento de atributos
+        # @return [true/false]
+        def attributes_loaded?
+            return (@attributes.size != 0)
+        end
+
         def process(message)
             cmd = message.split
             if cmd[0] == '[set-attrib]'
