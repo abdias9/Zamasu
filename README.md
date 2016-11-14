@@ -1,4 +1,4 @@
-# ruby-rpg
+# Zamasu UDP
 A fast RPG Framework for Ruby using libgosu.
 
 # Website
