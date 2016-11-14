@@ -1,12 +1,11 @@
-# Zamasu UDP
-Ruby Object Oriented Classes to manage shared Hashes with UDP Sockets.
-* Other Languages: [PT-BR](https://github.com/abdias9/Zamasu/blob/master/README-PTBR.md)
+# Zamasu
+Zamasu é um pequeno conjunto de classes para o serviço de compartilhamento de Hashes via UDP. Através da classe Zamasu::Server será possível receber e transmitir informações através do protocolo UDP, sincronizando essas informações de maneira leve e ágil, dando acesso remoto e compartilhado a um Hash de informações recebidas pelos Zamasu::Client's.
 
-# Documentation
-You can check all on DOC folder.
+# Documentação
+Zamasu é 100% documentada em português. Você pode acessar através do nosso [Endereço Temporário](https://zamasu.000webhostapp.com/). 
 
-# Setting Up
-* Just make sure to have [Ruby](https://www.ruby-lang.org/) installed (2.3 is recomended).
+# Requisitos
+* Possuir o [Ruby](https://www.ruby-lang.org/) instalado (recomendo a versão 2.3).
 
-# Running examples
-Check the [Example](https://github.com/abdias9/Zamasu/) pages.
+# Exemplos
+No diretório [Exemplos](https://github.com/abdias9/Zamasu/tree/master/Example), é possível encontrar exemplos síncronos da utilização do Zamasu, incluindo sua aplicação para o desenvolvimento de jogos utilizando a biblioteca [libgosu](https://www.libgosu.org/).
