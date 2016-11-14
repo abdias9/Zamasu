@@ -25,7 +25,7 @@ module Zamasu
         # Seta o valor de um atributo através da sua chave
         # @param [String] name Chave do atributo
         # @param [Object] value Novo valor do atributo
-        # @return [nil]
+        # @return [void]
         def set_attrib(name, value)
             @sout.send "[set-attrib] #{name}=#{value}", 0
         end
@@ -33,21 +33,21 @@ module Zamasu
         # Incrementa o valor de um atributo através de sua chave
         # @param [String] name Chave do atributo
         # @param [Object] value Valor do incremento
-        # @return [nil]
+        # @return [void]
         def increment_attrib(name, value)
             @sout.send "[increment-attrib] #{name}=#{value}", 0
         end
 
         # Envia todo o hash local de atributos para o Zamasu::Server
         # @param [Hash] attribs Hash de atributos
-        # @return [nil]
+        # @return [void]
         def set_attributes(attribs)
             @sout.send "[set-attribs] %#{attribs}", 0
         end
 
         # Inicializa o Hash de atributos enviando para o Zamasu::Server e setando os valores padrões na instância local
         # @param [Hash] attribs Hash de atributos
-        # @return [nil]
+        # @return [void]
         def initialize_attributes(attribs)
             @attributes = attribs
             set_attributes(attribs)
@@ -76,7 +76,7 @@ module Zamasu
         end
 
         # Inicia o loop de recebimento de dados numa nova Thread
-        # @return [nil]
+        # @return [void]
         def start_recv_thread
             Thread.new do recv end
         end

@@ -22,7 +22,7 @@ module Zamasu
         end
 
         # Loop de recebimento. Esse método é chamado ao final do construtor. Você não vai utilizar essa função, a não ser que deseje implementar uma nova.
-        # @return [nil]
+        # @return [void]
         def recv
             loop do 
                 message, address = @sock.recvfrom(BUFF)
@@ -35,7 +35,7 @@ module Zamasu
         end
 
         # Verifica se houve alguma alteração no hash e envia para os clientes. Ela é chamada após o recebimento de uma chamada de mudança de atributo.
-        # @return [nil]
+        # @return [void]
         def sync
             if !equal_attributes(@attributes, @last_attributes)
                 send("[set-attrib] %#{@attributes}")
@@ -45,7 +45,7 @@ module Zamasu
 
         # Envia uma mensagem para todos os clientes.
         # @param [String] message Mensagem
-        # @return [nil]
+        # @return [void]
         def send(message)
             @clients.each do |client|
                 @out.connect client.host, client.port
@@ -55,7 +55,7 @@ module Zamasu
 
         # Adiciona um novo cliente na lista de conexões. É chamada automaticamente toda vez que uma nova mensagem chega ao servidor. Verifica se o cliente já possui uma conexão, e se não possui, o adiciona a lista de clientes.
         # @param [ClientInfo] client Cliente.
-        # @return [nil]
+        # @return [void]
         def append_client(client)
             is = false 
             @clients.each do |c|
@@ -69,7 +69,7 @@ module Zamasu
 
         # Processa uma mensagem recebida. Você pode querer sobrescrevê-la.
         # @param [String] message Mensagem
-        # @return [nil]
+        # @return [void]
         def process(message)
             cmd = message.split
             case cmd[0]
@@ -84,12 +84,9 @@ module Zamasu
                     name, value = cmd[i].split('=')
                     @attributes[name] += eval(value)
                 end
-            end
-
-            if cmd[0] == '[set-attribs]'
+            when '[set-attribs]'
                 @attributes = eval(message.split('%')[1])
             end
-
             sync
         end
 
